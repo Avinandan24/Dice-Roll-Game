@@ -8,8 +8,7 @@ window.title("Dice Roll")
 
 dice = ["disc-1.png","disc-2.png","disc-3.png","disc-4.png","disc-5.png","disc-6.png"]
 
-# Resize the images
-size = (80, 80)  # Set the size you want (width, height)
+size = (80, 80)
 image1 = ImageTk.PhotoImage(Image.open(random.choice(dice)).resize(size))
 image2 = ImageTk.PhotoImage(Image.open(random.choice(dice)).resize(size))
 
@@ -23,8 +22,8 @@ label1.place(x=60, y=240)  # Left side
 label2.place(x=340, y=240) # Right side
 
 def dice_roll():
-    random_num1 = random.randint(1, 6)  # Generate random number for dice 1
-    random_num2 = random.randint(1, 6)  # Generate random number for dice 2
+    random_num1 = random.randint(1, 6)
+    random_num2 = random.randint(1, 6)
 
     image1 = ImageTk.PhotoImage(Image.open(dice[random_num1-1]).resize(size))
     label1.configure(image=image1)
